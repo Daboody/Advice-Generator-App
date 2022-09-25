@@ -1,0 +1,97 @@
+:root {
+    --first : #cee3e9;
+    --second :#52ffa8;
+    --third : #4e5d73;
+    --fourth : #323a49;
+    --fivth : #1f2632;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--fivth);
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+.advice-container {
+    width: 500px;
+    height: 300px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: var(--fourth);
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+/* Mobile Screen */  
+@media (min-width: 320px) and (max-width: 480px){
+    .advice-container {
+        width: 370px;
+        height: 450px;
+    }
+}
+.advice-id {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: var(--second);
+}
+.advice-content {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-size: 27px;
+    color: var(--first);
+    height: 50px;
+    padding: 20px 0;
+}
+.divider .img-wrapper {
+    background-image: url(../images/pattern-divider-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 400px;
+    height: 50px;
+}
+/* Mobile Screen */  
+@media (min-width: 320px) and (max-width: 480px){
+    .divider .img-wrapper {
+        background-image: url(../images/pattern-divider-mobile.svg);
+        width: 250px;
+    }
+}
+.button-wrapper {
+    position: absolute;
+    bottom: -30px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: var(--second);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+}
+.button-wrapper:hover{
+    box-shadow: 0 0 20px 1px var(--second);
+    transition: .3s;
+}
+.attribution {
+    text-align: center;
+    padding: 20px;
+    color: var(--first);
+    font-size: 13px;
+}
+.attribution a {
+    color: var(--second);
+    text-decoration: none;
+}
